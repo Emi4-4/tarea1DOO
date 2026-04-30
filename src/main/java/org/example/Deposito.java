@@ -11,10 +11,10 @@ public class Deposito<E> {
         Productos.add(producto);
     }
     public E getProducto(){
-        if (!Productos.isEmpty()) {
-           return Productos.remove(0);
+        if (Productos.isEmpty()) {
+           return null;
         } else {
-            return null;
+            return Productos.remove(0);
         }
     }
 }
