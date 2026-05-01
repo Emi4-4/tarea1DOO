@@ -128,7 +128,7 @@ public class Expendedor {
                                 //
                             }
                         } else {
-                            producto = cocacola.getProducto();
+                            producto = super8.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
                             } else {
