@@ -1,7 +1,8 @@
 package org.example;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+            throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
         // Inicializamos con 5 unidades de cada cosa
         Expendedor expendedor = new Expendedor(5);
 
