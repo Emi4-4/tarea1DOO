@@ -1,5 +1,7 @@
 package org.example;
 
 abstract class Bebida extends Producto{
-    public Bebida (){}
+    public Bebida (int serie){
+        super(serie);
+    }
 }
