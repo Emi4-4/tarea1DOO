@@ -9,6 +9,7 @@ public class Comprador {
         Moneda mon=exp.getVuelto();
         while (mon!=null){
             vuelto+= mon.getValor();
+            mon = exp.getVuelto();
         }
         if (p!=null){
             sonido=p.consumir();
