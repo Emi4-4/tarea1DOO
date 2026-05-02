@@ -66,14 +66,14 @@ public class Expendedor {
 
                             if (producto == null) {
                                 monedaVuelto.addProducto(m); // devuelve moneda
-                                throw new NoHayProductoException("No hay CocaCola");
+                                throw new NoHayProductoException("No queda CocaCola en stock");
                             }
 
                         } else {
                             producto = cocacola.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay CocaCola");
+                                throw new NoHayProductoException("No queda CocaCola en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
@@ -91,14 +91,14 @@ public class Expendedor {
                             producto = sprite.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay Sprite");
+                                throw new NoHayProductoException("No queda Sprite en stock");
                                 //
                             }
                         } else {
                             producto = sprite.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay Sprite");
+                                throw new NoHayProductoException("No queda Sprite en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
@@ -116,14 +116,14 @@ public class Expendedor {
                             producto = fanta.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay Fanta");
+                                throw new NoHayProductoException("No queda Fanta en stock");
                                 //
                             }
                         } else {
                             producto = fanta.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay Fanta");
+                                throw new NoHayProductoException("No queda Fanta en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
@@ -141,14 +141,14 @@ public class Expendedor {
                             producto = super8.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay super8");
+                                throw new NoHayProductoException("No quedan super8 en stock");
                                 //
                             }
                         } else {
                             producto = super8.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay super8");
+                                throw new NoHayProductoException("No quedan super8 en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
@@ -165,14 +165,14 @@ public class Expendedor {
                             producto = snickers.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay snickers");
+                                throw new NoHayProductoException("No quedan snickers en stock");
                                 //
                             }
                         } else {
                             producto = snickers.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay snickers");
+                                throw new NoHayProductoException("No quedan snickers en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
@@ -189,14 +189,14 @@ public class Expendedor {
                             producto = bonobon.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay bonobon");
+                                throw new NoHayProductoException("No quedan BonoBon en stock");
                                 //
                             }
                         } else {
                             producto = bonobon.getProducto();
                             if (producto == null) {
                                 monedaVuelto.addProducto(m);
-                                throw new NoHayProductoException("No hay bonobon");
+                                throw new NoHayProductoException("No quedan BonoBon en stock");
                             } else {
                                 int vuelto = (m.getValor() - productos.getPrecio()) / 100;
                                 for (int i = 0; i < vuelto; i++) {
