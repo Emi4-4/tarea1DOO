@@ -1,7 +1,19 @@
 package org.example;
 import java.util.Scanner;
-
+/**
+ * Clase que proporciona una interfaz interactiva para el sistema.
+ * Permite a los usuarios seleccionar monedas y productos de forma dinámica
+ * mientras el programa está en ejecución.
+ *
+ * @author Lenin(Chamo0312)
+ * @version 1.0
+ */
 public class MainInteractivo {
+    /**
+     * Punto de entrada interactivo del programa.
+     * Gestiona un bucle principal donde se solicitan entradas al usuario,
+     * se instancia la compra y se capturan las excepciones posibles.
+     */
     public static void main(String[] args){
         Scanner leer = new Scanner(System.in);
         Expendedor expendedor = new Expendedor(3);

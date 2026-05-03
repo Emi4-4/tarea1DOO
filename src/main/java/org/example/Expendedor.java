@@ -1,15 +1,29 @@
 package org.example;
+/**
+ * Clase que representa una máquina expendedora de productos de tipo bebida y dulce.
+ * Se encarga de gestionar el stock de productos, procesar pagos y calcular el vuelto.
+ *
+ * @author Valentina (arenisca)
+ * @author Lenin(Chamo0312)
+ * @version 2.0
+ */
 
 public class Expendedor {
+    /**deposito de bebidas y dulces*/
     private Deposito<Producto> cocacola;
     private Deposito<Producto> sprite;
     private Deposito<Producto> fanta;
     private Deposito<Producto> super8;
     private Deposito<Producto> snickers;
     private Deposito<Producto> bonobon;
+    /**deposito de monedas de vuelto*/
     private Deposito<Moneda> monedaVuelto;
-
-
+    /**
+     * Constructor que inicializa los depósitos y los llena con una cantidad inicial de productos.
+     * Cada producto recibe un número de serie único basado en su tipo.
+     *
+     * @param numeroProductos Cantidad de unidades para cada tipo de producto.
+     */
     public Expendedor(int numeroProductos) {
         cocacola = new Deposito<Producto>();
         sprite = new Deposito<Producto>();
@@ -39,10 +53,26 @@ public class Expendedor {
             }
         }
     }
-
+    /**
+     * Extrae una moneda de vuelto del depósito de monedas.
+     *
+     * @return Una moneda de 100 del depósito de vuelto, o null si no hay más.
+     */
     public Moneda getVuelto() {
         return monedaVuelto.getProducto();
     }
+    /**
+     * Procesa la compra de un producto validando el pago y el stock disponible.
+     * Si la compra es exitosa, calcula y deposita el vuelto en monedas de 100.
+     * En caso de error, la moneda entregada se devuelve al depósito de vuelto.
+     *
+     * @param m La moneda entregada para realizar la compra.
+     * @param cual El código identificador del producto que se quiere comprar.
+     * @return El producto comprado si la transacción es exitosa.
+     * @throws NoHayProductoException Si el código es inválido o no queda stock del producto.
+     * @throws PagoInsuficienteException Si el valor de la moneda es menor al precio del producto.
+     * @throws PagoIncorrectoException Si se intenta realizar una compra con una moneda nula.
+     */
 
     public Producto comprarProducto(Moneda m, int cual)
             throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
